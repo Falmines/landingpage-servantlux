@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servantlux Philanthropy Center - Bringing Light. Empowering Lives. Shaping a Better Tomorrow.">
+  <title>Servantlux Philanthropy Center</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="home">
+    <nav class="navbar container">
+      <a href="#home" class="brand">
+        <img src="servantlux-logo.png" alt="Servantlux Philanthropy Center">
+        <span><b>SERVANTLUX</b><small>PHILANTHROPY CENTER</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#about">Introduction</a>
+        <a href="#mission">Vision & Mission</a>
+        <a href="#structure">Structural</a>
+        <a href="#activities">Activity</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#support">Support Us</a>
+        <a href="#contact">Contact</a>
+        <button class="btn btn-gold nav-donate" data-modal="donateModal">♡ Donate Now</button>
+      </div>
+    </nav>
+
+    <section class="hero container">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">SERVANTLUX PHILANTHROPY CENTER</p>
+        <h1>Bringing Light.<br><span>Empowering Lives.</span><br>Shaping a Better Tomorrow.</h1>
+        <p class="hero-text">
+          Membangun hubungan persaudaraan lintas perbedaan, menyalakan cahaya kasih,
+          dan mengabdikannya melalui pelayanan nyata bagi sesama.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#mission">Our Mission <span>→</span></a>
+          <a class="btn btn-outline" href="#activities">Our Activities <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="hero-logo reveal">
+        <div class="glow"></div>
+        <img src="servantlux-logo.png" alt="Logo Servantlux Philanthropy">
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section about" id="about">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow dark">ABOUT US</p>
+          <h2>Servantlux<br>Philanthropy Center</h2>
+          <div class="gold-line"></div>
+          <p>
+            Servantlux hadir melalui pelayanan nyata kepada sesama dengan semangat
+            kasih, kepedulian, gotong royong, dan kemanusiaan.
+          </p>
+          <p>
+            Salah satu bentuk nyata programnya adalah <b>Social Live-In Servantlux 2026</b>,
+            yang menggabungkan live-in, kegiatan masyarakat, edukasi anak, dan aksi sosial.
+          </p>
+          <button class="btn btn-maroon" data-modal="aboutModal">Learn More About Us →</button>
+        </div>
+
+        <div class="about-card reveal">
+          <div class="photo-placeholder">
+            <div class="photo-icon">✦</div>
+            <span>Kasih bukan hanya diucapkan,<br>tetapi diwujudkan melalui tindakan nyata.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission" id="mission">
+      <div class="container">
+        <div class="section-heading light reveal">
+          <p class="eyebrow">OUR MISSION</p>
+          <h2>Tiga Pilar Kebaikan Kami</h2>
+        </div>
+        <div class="pillars">
+          <article class="pillar reveal">
+            <div class="icon-circle">🎓</div>
+            <h3>BELAJAR</h3>
+            <p>Terus belajar, mengembangkan diri, dan memberi ilmu yang bermanfaat bagi sesama.</p>
+          </article>
+          <article class="pillar reveal">
+            <div class="icon-circle">♡</div>
+            <h3>BERBAGI</h3>
+            <p>Menyebarkan kepedulian melalui aksi nyata untuk membantu mereka yang membutuhkan.</p>
+          </article>
+          <article class="pillar reveal">
+            <div class="icon-circle">🫂</div>
+            <h3>TUMBUH BERSAMA MASYARAKAT</h3>
+            <p>Berinteraksi dan membangun hubungan yang harmonis untuk kemajuan bersama.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section activities" id="activities">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow dark">OUR ACTIVITIES</p>
+          <h2>Program Unggulan Kami</h2>
+          <p>Social Live-In Servantlux 2026 · Sukabumi, Jawa Barat · 4 Hari 3 Malam</p>
+        </div>
+
+        <div class="cards">
+          <article class="activity-card reveal">
+            <div class="card-icon">🏡</div>
+            <h3>Live-In</h3>
+            <p>Tinggal bersama warga selama 4 hari 3 malam untuk belajar, berbaur, dan memahami kehidupan mereka secara langsung.</p>
+            <button class="text-btn" data-program="livein">Selengkapnya →</button>
+          </article>
+          <article class="activity-card reveal">
+            <div class="card-icon">🤝</div>
+            <h3>Kerja Bakti</h3>
+            <p>Berpartisipasi dalam kegiatan lingkungan sebagai bentuk gotong royong dan kepedulian sosial.</p>
+            <button class="text-btn" data-program="kerjabakti">Selengkapnya →</button>
+          </article>
+          <article class="activity-card reveal">
+            <div class="card-icon">🎨</div>
+            <h3>Kids Activity</h3>
+            <p>Kegiatan edukatif dan kreatif untuk ±50 anak di lokasi kegiatan.</p>
+            <button class="text-btn" data-program="kids">Selengkapnya →</button>
+          </article>
+          <article class="activity-card reveal">
+            <div class="card-icon">🎁</div>
+            <h3>Bakti Sosial</h3>
+            <p>Pembagian ±20 paket sembako kepada keluarga masyarakat yang membutuhkan.</p>
+            <button class="text-btn" data-program="baksos">Selengkapnya →</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact" id="structure">
+      <div class="container">
+        <div class="section-heading light reveal">
+          <p class="eyebrow">OUR IMPACT</p>
+          <h2>Bersama, Kita Hadirkan Perubahan</h2>
+        </div>
+        <div class="stats">
+          <div class="stat reveal"><strong data-count="20">0</strong><span>+</span><p>Paket Sembako</p></div>
+          <div class="stat reveal"><strong data-count="50">0</strong><span>+</span><p>Anak dalam Kegiatan Edukatif</p></div>
+          <div class="stat reveal"><strong data-count="4">0</strong><span> Hari</span><p>Kegiatan Penuh Makna</p></div>
+          <div class="stat reveal"><strong>Rp 3 Jt</strong><p>Target Dana</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section timeline-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow dark">PROGRAM FLOW</p>
+          <h2>Rangkaian Kegiatan</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal"><b>DAY 1</b><h3>ARRIVAL</h3><p>Kedatangan, koordinasi, dan adaptasi bersama host family.</p></div>
+          <div class="timeline-item reveal"><b>DAY 2</b><h3>COMMUNITY</h3><p>Live-in, kerja bakti, dan kegiatan bersama masyarakat.</p></div>
+          <div class="timeline-item reveal"><b>DAY 3</b><h3>SOCIAL ACTION</h3><p>Kids Activity dan pembagian paket sembako.</p></div>
+          <div class="timeline-item reveal"><b>DAY 4</b><h3>CLOSING</h3><p>Penutupan, evaluasi, dan berpamitan dengan masyarakat.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="support" id="support">
+      <div class="container support-grid">
+        <div class="reveal">
+          <p class="eyebrow">SUPPORT US</p>
+          <h2>Bersama, Kita Ciptakan Dampak yang Nyata</h2>
+          <p>Sekecil apapun dukungan, berarti bagi mereka.</p>
+        </div>
+        <div class="support-actions reveal">
+          <button class="btn btn-gold" data-modal="donateModal">♡ DONATE NOW</button>
+          <button class="btn btn-outline" data-modal="volunteerModal">♧ JOIN VOLUNTEER</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section transparency">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow dark">TRANSPARENCY</p>
+          <h2>Dukungan Anda, Amanah Kami</h2>
+        </div>
+        <div class="transparency-grid">
+          <div class="trans-card reveal">🏧<b>Pencatatan</b><span>Pemasukan & pengeluaran</span></div>
+          <div class="trans-card reveal">📸<b>Dokumentasi</b><span>Dokumentasi kegiatan</span></div>
+          <div class="trans-card reveal">📑<b>Laporan</b><span>Penyaluran bantuan</span></div>
+          <div class="trans-card reveal">✓<b>LPJ</b><span>Setelah kegiatan selesai</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-box reveal">
+        <div>
+          <p class="eyebrow">CONTACT</p>
+          <h2>Mari Berkontribusi Bersama Servantlux</h2>
+          <p>Social Live-In Servantlux 2026</p>
+        </div>
+        <button class="btn btn-gold" data-modal="contactModal">Hubungi Kami →</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <img src="servantlux-logo.png" alt="">
+          <span><b>SERVANTLUX</b><small>PHILANTHROPY CENTER</small></span>
+        </div>
+        <p>Bringing Light.<br>Empowering Lives.<br>Shaping a Better Tomorrow.</p>
+      </div>
+      <div><h4>MENU</h4><a href="#about">Introduction</a><a href="#mission">Vision & Mission</a><a href="#structure">Structural</a><a href="#activities">Activity</a></div>
+      <div><h4>SUPPORT</h4><button data-modal="donateModal">Donate Now</button><button data-modal="volunteerModal">Become Volunteer</button><button data-modal="donateModal">Sponsorship</button></div>
+      <div><h4>CONTACT</h4><p>Sukabumi, Jawa Barat<br>Indonesia</p><p>☎ 081399017165 (Nakeya)</p></div>
+    </div>
+    <div class="copyright">© 2026 Servantlux Philanthropy Center. All Rights Reserved.</div>
+  </footer>
+
+  <!-- MODALS -->
+  <div class="modal" id="programModal">
+    <div class="modal-content">
+      <button class="modal-close">×</button>
+      <p class="eyebrow dark">SERVANTLUX ACTIVITY</p>
+      <h2 id="programTitle"></h2>
+      <div class="gold-line"></div>
+      <p id="programDescription"></p>
+      <button class="btn btn-maroon" data-modal="donateModal">Dukung Program →</button>
+    </div>
+  </div>
+
+  <div class="modal" id="aboutModal">
+    <div class="modal-content">
+      <button class="modal-close">×</button>
+      <p class="eyebrow dark">ABOUT SERVANTLUX</p>
+      <h2>Hadir, Berbagi, dan Memberikan Dampak Nyata.</h2>
+      <p>Servantlux mengangkat nilai kasih, kepedulian, gotong royong, dan kemanusiaan. Social Live-In Servantlux 2026 dirancang agar peserta dapat berinteraksi langsung dengan masyarakat, mengikuti aktivitas warga, serta memberikan manfaat melalui kegiatan sosial.</p>
+      <p><b>Tema:</b> “Belajar, Berbaur, dan Berkontribusi Bersama Masyarakat.”</p>
+    </div>
+  </div>
+
+  <div class="modal" id="donateModal">
+    <div class="modal-content center">
+      <button class="modal-close">×</button>
+      <div class="modal-heart">♡</div>
+      <p class="eyebrow dark">SUPPORT SERVANTLUX 2026</p>
+      <h2>Jadilah Bagian dari Kebaikan</h2>
+      <p>Dukungan dapat diberikan dalam bentuk <b>donasi dana, donasi barang, maupun sponsorship</b>.</p>
+      <div class="donation-list">
+        <div>💰 <b>Donasi Dana</b><small>Mendukung kebutuhan utama kegiatan</small></div>
+        <div>🎁 <b>Donasi Barang</b><small>Sembako, perlengkapan anak, snack, dan kebutuhan kegiatan</small></div>
+        <div>🤝 <b>Sponsorship</b><small>Dukungan dana, fasilitas, maupun kebutuhan program</small></div>
+      </div>
+      <p class="target">Target Dana: <b>Rp 3.000.000</b></p>
+      <a class="btn btn-maroon" href="tel:081399017165">Hubungi Nakeya · 081399017165</a>
+    </div>
+  </div>
+
+  <div class="modal" id="volunteerModal">
+    <div class="modal-content center">
+      <button class="modal-close">×</button>
+      <div class="modal-heart">🫂</div>
+      <p class="eyebrow dark">JOIN US</p>
+      <h2>Become a Volunteer</h2>
+      <p>Ingin ikut berkontribusi dalam Social Live-In Servantlux 2026? Hubungi tim Servantlux untuk informasi lebih lanjut.</p>
+      <a class="btn btn-maroon" href="tel:081399017165">Hubungi Nakeya →</a>
+    </div>
+  </div>
+
+  <div class="modal" id="contactModal">
+    <div class="modal-content center">
+      <button class="modal-close">×</button>
+      <p class="eyebrow dark">CONTACT US</p>
+      <h2>Servantlux Philanthropy Center</h2>
+      <p>DI Yogyakarta, Indonesia</p>
+      <a class="phone-link" href="tel:081399017165">☎ 081399017165 (Nakeya)</a>
+      <div class="gold-line"></div>
+      <p>“Bersama, kita hadirkan kebaikan yang nyata.”</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
