@@ -1,45 +1,79 @@
-// Servantlux Philanthropy Center - Interactive Landing Page
-
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
 
-// Mobile menu
+/* =========================
+   MOBILE NAVIGATION
+   ========================= */
 const menuToggle = $("#menuToggle");
 const navMenu = $("#navMenu");
-menuToggle?.addEventListener("click", () => navMenu.classList.toggle("open"));
-$$(".nav-menu a").forEach(link => link.addEventListener("click", () => navMenu.classList.remove("open")));
+const grandPlanToggle = $(".nav-dropdown-toggle");
+const grandPlanDropdown = $(".nav-dropdown");
 
-// Modal system
+menuToggle?.addEventListener("click", () => {
+  const isOpen = navMenu.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+grandPlanToggle?.addEventListener("click", (e) => {
+  e.preventDefault();
+  const isOpen = grandPlanDropdown.classList.toggle("open");
+  grandPlanToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+$$(".nav-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu?.classList.remove("open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+    grandPlanDropdown?.classList.remove("open");
+    grandPlanToggle?.setAttribute("aria-expanded", "false");
+  });
+});
+
+/* =========================
+   MODAL SYSTEM
+   ========================= */
 const modals = $$(".modal");
+
 function openModal(id) {
   const modal = document.getElementById(id);
   if (!modal) return;
   modal.classList.add("active");
   document.body.classList.add("modal-open");
 }
+
 function closeAllModals() {
-  modals.forEach(m => m.classList.remove("active"));
+  modals.forEach(modal => modal.classList.remove("active"));
   document.body.classList.remove("modal-open");
 }
 
-$$("[data-modal]").forEach(btn => {
-  btn.addEventListener("click", () => openModal(btn.dataset.modal));
+document.addEventListener("click", (e) => {
+  const trigger = e.target.closest("[data-modal]");
+  if (!trigger) return;
+  e.preventDefault();
+  openModal(trigger.dataset.modal);
 });
-$$(".modal-close").forEach(btn => btn.addEventListener("click", closeAllModals));
+
+$$(".modal-close").forEach(button => {
+  button.addEventListener("click", closeAllModals);
+});
+
 modals.forEach(modal => {
   modal.addEventListener("click", (e) => {
     if (e.target === modal) closeAllModals();
   });
 });
-document.addEventListener("keydown", e => {
+
+document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeAllModals();
 });
 
-// Activity popup content based on the PDF
+/* =========================
+   PROGRAM POPUPS
+   ========================= */
 const programs = {
   livein: {
     title: "Live-In",
-    description: "Tinggal bersama warga selama 4 Hari 3 Malam. Peserta berinteraksi langsung dengan masyarakat untuk belajar, berbaur, dan memahami kehidupan sehari-hari warga."
+    description: "Tinggal bersama warga selama 4 Hari 3 Malam. Peserta berinteraksi langsung dengan masyarakat untuk belajar, berbaur, memahami kehidupan sehari-hari, dan membangun persaudaraan."
   },
   kerjabakti: {
     title: "Kerja Bakti",
@@ -47,69 +81,69 @@ const programs = {
   },
   kids: {
     title: "Kids Activity",
-    description: "Kegiatan edukatif dan kreatif untuk ±50 anak. Program ini memberikan ruang bagi anak-anak untuk belajar, bermain, dan bertumbuh melalui aktivitas positif."
+    description: "Kegiatan edukatif dan kreatif yang memberikan ruang bagi anak-anak untuk belajar, bermain, bertumbuh, dan mendapatkan pengalaman positif."
   },
   baksos: {
     title: "Bakti Sosial",
-    description: "Pembagian ±20 paket sembako kepada keluarga masyarakat yang membutuhkan sebagai bentuk kepedulian dan pelayanan nyata."
+    description: "Pelayanan sosial dan penyaluran bantuan kepada keluarga serta masyarakat yang membutuhkan sebagai bentuk kepedulian dan pelayanan nyata."
   }
 };
 
 $$("[data-program]").forEach(button => {
   button.addEventListener("click", () => {
     const data = programs[button.dataset.program];
+    if (!data) return;
     $("#programTitle").textContent = data.title;
     $("#programDescription").textContent = data.description;
     openModal("programModal");
   });
 });
 
-// Scroll reveal
+/* =========================
+   SCROLL REVEAL
+   ========================= */
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      revealObserver.unobserve(entry.target);
-    }
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("visible");
+    revealObserver.unobserve(entry.target);
   });
-}, {threshold: 0.12});
+}, { threshold: 0.10 });
+
 $$(".reveal").forEach(el => revealObserver.observe(el));
 
-// Animated statistics
-const counterObserver = new IntersectionObserver(entries => {
+/* =========================
+   GRAND PLAN ACTIVE YEAR
+   ========================= */
+const planSections = $$(".plan-year");
+const planTabs = $$(".plan-tab");
+
+const planObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    const el = entry.target;
-    const target = Number(el.dataset.count);
-    if (!target) return;
-    let start = 0;
-    const duration = 1100;
-    const startTime = performance.now();
-    const tick = now => {
-      const progress = Math.min((now - startTime) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.floor(target * eased);
-      if (progress < 1) requestAnimationFrame(tick);
-      else el.textContent = target;
-    };
-    requestAnimationFrame(tick);
-    counterObserver.unobserve(el);
+    planTabs.forEach(tab => tab.classList.remove("active"));
+    const activeTab = document.querySelector(`.plan-tab[href="#${entry.target.id}"]`);
+    activeTab?.classList.add("active");
   });
-}, {threshold: 0.5});
-$$("[data-count]").forEach(el => counterObserver.observe(el));
+}, { rootMargin: "-30% 0px -55% 0px" });
 
-// Active navigation highlight
+planSections.forEach(section => planObserver.observe(section));
+
+/* =========================
+   GENERAL ACTIVE NAVIGATION
+   ========================= */
 const sections = $$("main section[id], header[id]");
-const navLinks = $$(".nav-menu a");
+const navLinks = $$(".nav-menu > a");
+
 const activeObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     navLinks.forEach(link => link.classList.remove("active"));
-    const active = document.querySelector(`.nav-menu a[href="#${entry.target.id}"]`);
+    const active = document.querySelector(`.nav-menu > a[href="#${entry.target.id}"]`);
     active?.classList.add("active");
   });
-}, {rootMargin:"-35% 0px -55% 0px"});
+}, { rootMargin: "-35% 0px -55% 0px" });
+
 sections.forEach(section => activeObserver.observe(section));
 
-// Prevent placeholder footer buttons from doing nothing
-console.log("Servantlux Philanthropy Center landing page loaded.");
+console.log("Servantlux Company Profile · Grand Plan 2026–2030 loaded.");

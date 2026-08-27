@@ -3,43 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Servantlux Philanthropy Center - Bringing Light. Empowering Lives. Shaping a Better Tomorrow.">
-  <title>Servantlux Philanthropy Center</title>
+  <meta name="description" content="Servantlux Philanthropy Center - Company Profile, Vision, Mission, Grand Plan 2026-2030, programs and commitment to society.">
+  <title>Servantlux Philanthropy Center | Company Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sauce+One:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="header" id="home">
     <nav class="navbar container">
-      <a href="#home" class="brand">
+      <a href="#home" class="brand" aria-label="Servantlux Philanthropy Center">
         <img src="servantlux-logo.png" alt="Servantlux Philanthropy Center">
         <span><b>SERVANTLUX</b><small>PHILANTHROPY CENTER</small></span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
 
       <div class="nav-menu" id="navMenu">
-        <a href="#about">Introduction</a>
-        <a href="#mission">Vision & Mission</a>
-        <a href="#structure">Structural</a>
-        <a href="#activities">Activity</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#support">Support Us</a>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#vision-mission">Vision & Mission</a>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+            Grand Plan <span>⌄</span>
+          </button>
+          <div class="grandplan-menu">
+            <a href="#grandplan-2026"><span>01</span> 2026 · Tahun Pertama</a>
+            <a href="#grandplan-2027"><span>02</span> 2027 · Tahun Kedua</a>
+            <a href="#grandplan-2028"><span>03</span> 2028 · Tahun Ketiga</a>
+            <a href="#grandplan-2029"><span>04</span> 2029 · Tahun Keempat</a>
+            <a href="#grandplan-2030"><span>05</span> 2030 · Tahun Kelima</a>
+          </div>
+        </div>
+
+        <a href="#activities">Programs</a>
+        <a href="#impact">Impact</a>
         <a href="#contact">Contact</a>
-        <button class="btn btn-gold nav-donate" data-modal="donateModal">♡ Donate Now</button>
+        <button class="btn btn-gold nav-donate" data-modal="donateModal">♡ Support Us</button>
       </div>
     </nav>
 
     <section class="hero container">
       <div class="hero-copy reveal">
-        <p class="eyebrow">SERVANTLUX PHILANTHROPY CENTER</p>
+        <p class="eyebrow">COMPANY PROFILE · SERVANTLUX PHILANTHROPY</p>
         <h1>Bringing Light.<br><span>Empowering Lives.</span><br>Shaping a Better Tomorrow.</h1>
         <p class="hero-text">
-          Membangun hubungan persaudaraan lintas perbedaan, menyalakan cahaya kasih,
-          dan mengabdikannya melalui pelayanan nyata bagi sesama.
+          Membangun persaudaraan dalam keberagaman, menyalakan cahaya kasih,
+          dan mewujudkan kepedulian melalui tindakan nyata yang berdampak dan berkelanjutan.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-gold" href="#mission">Our Mission <span>→</span></a>
-          <a class="btn btn-outline" href="#activities">Our Activities <span>→</span></a>
+          <a class="btn btn-gold" href="#vision-mission">Vision & Mission <span>→</span></a>
+          <a class="btn btn-outline" href="#grandplan">View Grand Plan <span>→</span></a>
+        </div>
+        <div class="hero-meta">
+          <span>2026 — 2030</span>
+          <span>5 YEAR GRAND PLAN</span>
+          <span>PHILANTHROPY CENTER</span>
         </div>
       </div>
 
@@ -51,6 +73,7 @@
   </header>
 
   <main>
+    <!-- ABOUT -->
     <section class="section about" id="about">
       <div class="container split">
         <div class="reveal">
@@ -58,153 +81,226 @@
           <h2>Servantlux<br>Philanthropy Center</h2>
           <div class="gold-line"></div>
           <p>
-            Servantlux hadir melalui pelayanan nyata kepada sesama dengan semangat
-            kasih, kepedulian, gotong royong, dan kemanusiaan.
+            Servantlux hadir sebagai wadah pelayanan dan kepedulian yang berkomitmen
+            membangun persaudaraan, memperkuat kemanusiaan, dan menghadirkan manfaat
+            nyata bagi masyarakat.
           </p>
           <p>
-            Salah satu bentuk nyata programnya adalah <b>Social Live-In Servantlux 2026</b>,
-            yang menggabungkan live-in, kegiatan masyarakat, edukasi anak, dan aksi sosial.
+            Kami mengembangkan organisasi secara bertahap melalui tata kelola yang baik,
+            penguatan program, kolaborasi, transparansi, dan perluasan dampak dari tingkat
+            lokal hingga internasional.
           </p>
           <button class="btn btn-maroon" data-modal="aboutModal">Learn More About Us →</button>
         </div>
 
         <div class="about-card reveal">
-          <div class="photo-placeholder">
-            <div class="photo-icon">✦</div>
-            <span>Kasih bukan hanya diucapkan,<br>tetapi diwujudkan melalui tindakan nyata.</span>
+          <div class="about-visual">
+            <div class="about-orbit orbit-one"></div>
+            <div class="about-orbit orbit-two"></div>
+            <img src="servantlux-logo.png" alt="Servantlux">
+            <strong>BERSATU DALAM KASIH</strong>
+            <span>MELAYANI DALAM TINDAKAN</span>
+            <small>Menenerangi kehidupan melalui pelayanan nyata.</small>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mission" id="mission">
+    <!-- VISION + MISSION = ONE SECTION -->
+    <section class="vision-mission" id="vision-mission">
       <div class="container">
         <div class="section-heading light reveal">
-          <p class="eyebrow">OUR MISSION</p>
-          <h2>Tiga Pilar Kebaikan Kami</h2>
+          <p class="eyebrow">COMPANY PROFILE</p>
+          <h2>Visi & Misi Servantlux</h2>
+          <p>Satu arah, satu nilai, dan satu komitmen untuk menghadirkan dampak yang berkelanjutan.</p>
         </div>
-        <div class="pillars">
-          <article class="pillar reveal">
-            <div class="icon-circle">🎓</div>
-            <h3>BELAJAR</h3>
-            <p>Terus belajar, mengembangkan diri, dan memberi ilmu yang bermanfaat bagi sesama.</p>
+
+        <div class="vm-grid">
+          <article class="vm-card vision-card reveal">
+            <div class="vm-icon">◉</div>
+            <p class="vm-label">VISI</p>
+            <h3>Persaudaraan, kasih, dan kepedulian yang diwujudkan dalam tindakan nyata.</h3>
+            <p>
+              Merajut persaudaraan dalam keberagaman, menyalakan cahaya kasih,
+              dan mewujudkan kepedulian melalui tindakan nyata bagi sesama.
+            </p>
           </article>
-          <article class="pillar reveal">
-            <div class="icon-circle">♡</div>
-            <h3>BERBAGI</h3>
-            <p>Menyebarkan kepedulian melalui aksi nyata untuk membantu mereka yang membutuhkan.</p>
+
+          <article class="vm-card mission-card reveal">
+            <div class="vm-icon">✦</div>
+            <p class="vm-label">MISI</p>
+            <div class="mission-list">
+              <div><b>01</b><span>Membangun pelayanan yang berdampak, relevan, dan berkelanjutan.</span></div>
+              <div><b>02</b><span>Memperkuat organisasi melalui tata kelola, integritas, dan kualitas.</span></div>
+              <div><b>03</b><span>Mengembangkan kolaborasi dengan masyarakat, lembaga, dan donatur.</span></div>
+              <div><b>04</b><span>Memperluas jangkauan manfaat hingga berbagai wilayah dan tingkat internasional.</span></div>
+            </div>
           </article>
-          <article class="pillar reveal">
-            <div class="icon-circle">🫂</div>
-            <h3>TUMBUH BERSAMA MASYARAKAT</h3>
-            <p>Berinteraksi dan membangun hubungan yang harmonis untuk kemajuan bersama.</p>
+
+          <article class="values-strip reveal">
+            <span>INTEGRITAS</span>
+            <i>•</i><span>KASIH</span>
+            <i>•</i><span>KEPEDULIAN</span>
+            <i>•</i><span>KOLABORASI</span>
+            <i>•</i><span>TRANSPARANSI</span>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- GRAND PLAN -->
+    <section class="section grandplan-section" id="grandplan">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow dark">GRAND PLAN · 2026 — 2030</p>
+          <h2>Perjalanan 5 Tahun Servantlux</h2>
+          <p>Roadmap pengembangan organisasi, pelayanan, kualitas, dan perluasan dampak secara bertahap.</p>
+        </div>
+
+        <div class="grandplan-tabs reveal">
+          <a href="#grandplan-2026" class="plan-tab active"><b>2026</b><span>Tahun 1</span></a>
+          <a href="#grandplan-2027" class="plan-tab"><b>2027</b><span>Tahun 2</span></a>
+          <a href="#grandplan-2028" class="plan-tab"><b>2028</b><span>Tahun 3</span></a>
+          <a href="#grandplan-2029" class="plan-tab"><b>2029</b><span>Tahun 4</span></a>
+          <a href="#grandplan-2030" class="plan-tab"><b>2030</b><span>Tahun 5</span></a>
+        </div>
+
+        <div class="plan-list">
+          <!-- 2026 -->
+          <article class="plan-year reveal" id="grandplan-2026">
+            <div class="plan-year-head">
+              <div class="year-number">01</div>
+              <div><p>TAHUN PERTAMA</p><h3>2026</h3></div>
+              <span class="year-focus">FOUNDATION</span>
+            </div>
+            <div class="plan-cards four">
+              <div class="plan-card"><span>01</span><h4>Pembuatan Struktur Philanthropy</h4><p>Membentuk struktur organisasi yang solid dan adaptif, menetapkan jobdesk, alur kerja, sistem koordinasi, serta tata kelola yang transparan dan akuntabel.</p></div>
+              <div class="plan-card"><span>02</span><h4>Branding Sosmed</h4><p>Membangun identitas visual yang kuat dan konsisten, aktif di media sosial, serta menghadirkan konten edukatif, inspiratif, dan informatif.</p></div>
+              <div class="plan-card"><span>03</span><h4>Website External & Internal</h4><p>Membangun company profile, kanal informasi dan donasi, serta sistem internal untuk dokumen, perizinan, RAB, dan administrasi donatur.</p></div>
+              <div class="plan-card"><span>04</span><h4>Mencari Donatur</h4><p>Membangun relasi dengan donatur individu, komunitas, dan perusahaan melalui pendekatan profesional, transparansi, dan laporan yang jelas.</p></div>
+            </div>
+          </article>
+
+          <!-- 2027 -->
+          <article class="plan-year reveal" id="grandplan-2027">
+            <div class="plan-year-head">
+              <div class="year-number">02</div>
+              <div><p>TAHUN KEDUA</p><h3>2027</h3></div>
+              <span class="year-focus">STRENGTHEN</span>
+            </div>
+            <div class="plan-cards five">
+              <div class="plan-card"><span>01</span><h4>Legacy / Legalitas Perusahaan</h4><p>Mengurus legalitas secara resmi dan profesional, membangun tata kelola yang baik, serta memastikan kepatuhan hukum organisasi.</p></div>
+              <div class="plan-card"><span>02</span><h4>Ceremonial Opening / Syukuran</h4><p>Mengadakan seremoni pembukaan atau syukuran serta mempererat hubungan dengan donatur, relawan, dan mitra.</p></div>
+              <div class="plan-card"><span>03</span><h4>Perkuat Fondasi Perusahaan</h4><p>Menjalankan merchandise dengan sistem pembagian hasil dan membangun kemandirian finansial untuk keberlanjutan misi.</p><div class="ratio"><b>20%<small>DONASI</small></b><b>80%<small>OPERASIONAL</small></b></div></div>
+              <div class="plan-card"><span>04</span><h4>Mencari Donatur Lebih</h4><p>Memperluas jaringan donatur individu, komunitas, dan perusahaan serta menjalin kemitraan jangka panjang.</p></div>
+              <div class="plan-card"><span>05</span><h4>Riset Tempat yang Membutuhkan Bantuan</h4><p>Melakukan riset dan survei lokasi yang membutuhkan bantuan serta memastikan program tepat sasaran dan berkelanjutan.</p></div>
+            </div>
+          </article>
+
+          <!-- 2028 -->
+          <article class="plan-year reveal" id="grandplan-2028">
+            <div class="plan-year-head">
+              <div class="year-number">03</div>
+              <div><p>TAHUN KETIGA</p><h3>2028</h3></div>
+              <span class="year-focus">EXPANSION</span>
+            </div>
+            <div class="plan-cards three">
+              <div class="plan-card"><span>01</span><h4>Pemerataan Fasilitas di Pulau Jawa</h4><p>Meningkatkan dan meratakan fasilitas layanan serta program di berbagai wilayah Pulau Jawa agar manfaat dapat dirasakan lebih luas dan merata.</p></div>
+              <div class="plan-card"><span>02</span><h4>Ekspansi Pemerataan Fasilitas ke Pulau di Luar Jawa</h4><p>Memperluas jangkauan fasilitas dan program ke berbagai pulau di luar Jawa untuk menjangkau lebih banyak masyarakat yang membutuhkan.</p></div>
+              <div class="plan-card"><span>03</span><h4>Mencari Lokasi Titik Perusahaan & Daftar di Google</h4><p>Menentukan lokasi titik perusahaan secara strategis dan mendaftarkannya di Google agar informasi mudah ditemukan masyarakat dan calon mitra.</p></div>
+            </div>
+          </article>
+
+          <!-- 2029 -->
+          <article class="plan-year reveal" id="grandplan-2029">
+            <div class="plan-year-head">
+              <div class="year-number">04</div>
+              <div><p>TAHUN KEEMPAT</p><h3>2029</h3></div>
+              <span class="year-focus">COLLABORATION</span>
+            </div>
+            <div class="plan-cards two">
+              <div class="plan-card"><span>01</span><h4>Kerja Sama dengan Lembaga untuk Pemerataan Fasilitas di Pelosok</h4><p>Membangun kolaborasi strategis dengan lembaga pemerintah, sosial, pendidikan, keagamaan, NGO, dan komunitas internasional untuk memperluas jangkauan manfaat serta mengoptimalkan sumber daya.</p></div>
+              <div class="plan-card"><span>02</span><h4>Mencari Donatur Lintas Negara</h4><p>Memperluas jaringan donatur hingga tingkat internasional, membangun kepercayaan melalui transparansi, dan mengajak lebih banyak pihak menjadi bagian dari perubahan.</p><div class="partner-tags"><span>DONATUR INDIVIDU</span><span>CORPORATE PARTNER</span><span>FOUNDATION</span><span>DIASPORA</span></div></div>
+            </div>
+          </article>
+
+          <!-- 2030 -->
+          <article class="plan-year plan-final reveal" id="grandplan-2030">
+            <div class="plan-year-head">
+              <div class="year-number">05</div>
+              <div><p>TAHUN KELIMA</p><h3>2030</h3></div>
+              <span class="year-focus">EXCELLENCE</span>
+            </div>
+            <div class="plan-cards three">
+              <div class="plan-card"><span>01</span><h4>Peningkatan Pelayanan & Mutu Terus Menerus</h4><p>Evaluasi rutin, inovasi program, peningkatan kompetensi SDM, pemanfaatan teknologi, pelayanan yang cepat dan tepat, serta fokus pada kepuasan penerima manfaat.</p></div>
+              <div class="plan-card"><span>02</span><h4>Quality Control Perusahaan</h4><p>Standardisasi SOP, monitoring dan evaluasi berkala, audit internal, perbaikan berkelanjutan berbasis data, serta manajemen risiko untuk menjaga kualitas dan ketepatan sasaran.</p></div>
+              <div class="plan-card"><span>03</span><h4>Menjaga Integritas Perusahaan, Transparansi Publik & Anti-KKN</h4><p>Transparansi laporan keuangan dan program, keterbukaan informasi, pengawasan internal yang kuat, komitmen Anti-KKN, dan budaya integritas di setiap lini organisasi.</p></div>
+            </div>
+            <div class="final-statement">
+              <strong>2030 · SERVANTLUX EXCELLENCE</strong>
+              <span>Pelayanan terbaik · Quality Control · Integritas · Transparansi · Anti-KKN</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
     <section class="section activities" id="activities">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow dark">OUR ACTIVITIES</p>
+          <p class="eyebrow dark">PROGRAMS</p>
           <h2>Program Unggulan Kami</h2>
-          <p>Social Live-In Servantlux 2026 · Sukabumi, Jawa Barat · 4 Hari 3 Malam</p>
+          <p>Program pelayanan dirancang untuk belajar, berbaur, berbagi, dan tumbuh bersama masyarakat.</p>
         </div>
-
         <div class="cards">
-          <article class="activity-card reveal">
-            <div class="card-icon">🏡</div>
-            <h3>Live-In</h3>
-            <p>Tinggal bersama warga selama 4 hari 3 malam untuk belajar, berbaur, dan memahami kehidupan mereka secara langsung.</p>
-            <button class="text-btn" data-program="livein">Selengkapnya →</button>
-          </article>
-          <article class="activity-card reveal">
-            <div class="card-icon">🤝</div>
-            <h3>Kerja Bakti</h3>
-            <p>Berpartisipasi dalam kegiatan lingkungan sebagai bentuk gotong royong dan kepedulian sosial.</p>
-            <button class="text-btn" data-program="kerjabakti">Selengkapnya →</button>
-          </article>
-          <article class="activity-card reveal">
-            <div class="card-icon">🎨</div>
-            <h3>Kids Activity</h3>
-            <p>Kegiatan edukatif dan kreatif untuk ±50 anak di lokasi kegiatan.</p>
-            <button class="text-btn" data-program="kids">Selengkapnya →</button>
-          </article>
-          <article class="activity-card reveal">
-            <div class="card-icon">🎁</div>
-            <h3>Bakti Sosial</h3>
-            <p>Pembagian ±20 paket sembako kepada keluarga masyarakat yang membutuhkan.</p>
-            <button class="text-btn" data-program="baksos">Selengkapnya →</button>
-          </article>
+          <article class="activity-card reveal"><div class="card-icon">⌂</div><h3>Live-In</h3><p>Tinggal bersama warga selama 4 hari 3 malam untuk belajar, berbaur, dan memahami kehidupan masyarakat secara langsung.</p><button class="text-btn" data-program="livein">Selengkapnya →</button></article>
+          <article class="activity-card reveal"><div class="card-icon">✦</div><h3>Kerja Bakti</h3><p>Berpartisipasi dalam kegiatan lingkungan sebagai bentuk gotong royong, kepedulian, dan kontribusi langsung.</p><button class="text-btn" data-program="kerjabakti">Selengkapnya →</button></article>
+          <article class="activity-card reveal"><div class="card-icon">♡</div><h3>Kids Activity</h3><p>Kegiatan edukatif dan kreatif yang memberikan ruang bagi anak-anak untuk belajar, bermain, dan bertumbuh.</p><button class="text-btn" data-program="kids">Selengkapnya →</button></article>
+          <article class="activity-card reveal"><div class="card-icon">♧</div><h3>Bakti Sosial</h3><p>Pelayanan sosial dan penyaluran bantuan kepada keluarga serta masyarakat yang membutuhkan.</p><button class="text-btn" data-program="baksos">Selengkapnya →</button></article>
         </div>
       </div>
     </section>
 
-    <section class="impact" id="structure">
+    <!-- IMPACT -->
+    <section class="impact" id="impact">
       <div class="container">
         <div class="section-heading light reveal">
           <p class="eyebrow">OUR IMPACT</p>
           <h2>Bersama, Kita Hadirkan Perubahan</h2>
+          <p>Setiap langkah dibangun untuk menciptakan manfaat yang nyata dan berkelanjutan.</p>
         </div>
         <div class="stats">
-          <div class="stat reveal"><strong data-count="20">0</strong><span>+</span><p>Paket Sembako</p></div>
-          <div class="stat reveal"><strong data-count="50">0</strong><span>+</span><p>Anak dalam Kegiatan Edukatif</p></div>
-          <div class="stat reveal"><strong data-count="4">0</strong><span> Hari</span><p>Kegiatan Penuh Makna</p></div>
-          <div class="stat reveal"><strong>Rp 3 Jt</strong><p>Target Dana</p></div>
+          <div class="stat reveal"><strong>5</strong><span> Tahun</span><p>Grand Plan 2026–2030</p></div>
+          <div class="stat reveal"><strong>3</strong><span> Pilar</span><p>Excellence 2030</p></div>
+          <div class="stat reveal"><strong>4</strong><span> Nilai</span><p>Integritas, Kasih, Kepedulian, Kolaborasi</p></div>
+          <div class="stat reveal"><strong>∞</strong><p>Dampak Berkelanjutan</p></div>
         </div>
       </div>
     </section>
 
-    <section class="section timeline-section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow dark">PROGRAM FLOW</p>
-          <h2>Rangkaian Kegiatan</h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item reveal"><b>DAY 1</b><h3>ARRIVAL</h3><p>Kedatangan, koordinasi, dan adaptasi bersama host family.</p></div>
-          <div class="timeline-item reveal"><b>DAY 2</b><h3>COMMUNITY</h3><p>Live-in, kerja bakti, dan kegiatan bersama masyarakat.</p></div>
-          <div class="timeline-item reveal"><b>DAY 3</b><h3>SOCIAL ACTION</h3><p>Kids Activity dan pembagian paket sembako.</p></div>
-          <div class="timeline-item reveal"><b>DAY 4</b><h3>CLOSING</h3><p>Penutupan, evaluasi, dan berpamitan dengan masyarakat.</p></div>
-        </div>
-      </div>
-    </section>
-
+    <!-- SUPPORT -->
     <section class="support" id="support">
       <div class="container support-grid">
         <div class="reveal">
-          <p class="eyebrow">SUPPORT US</p>
-          <h2>Bersama, Kita Ciptakan Dampak yang Nyata</h2>
-          <p>Sekecil apapun dukungan, berarti bagi mereka.</p>
+          <p class="eyebrow">SUPPORT SERVANTLUX</p>
+          <h2>Bersatu dalam Kasih, Melayani dalam Tindakan.</h2>
+          <p>Sekecil apa pun dukungan dapat menjadi cahaya bagi kehidupan dan membantu memperluas manfaat.</p>
         </div>
         <div class="support-actions reveal">
-          <button class="btn btn-gold" data-modal="donateModal">♡ DONATE NOW</button>
-          <button class="btn btn-outline" data-modal="volunteerModal">♧ JOIN VOLUNTEER</button>
+          <button class="btn btn-gold" data-modal="donateModal">♡ SUPPORT US</button>
+          <button class="btn btn-outline" data-modal="volunteerModal">JOIN VOLUNTEER</button>
         </div>
       </div>
     </section>
 
-    <section class="section transparency">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow dark">TRANSPARENCY</p>
-          <h2>Dukungan Anda, Amanah Kami</h2>
-        </div>
-        <div class="transparency-grid">
-          <div class="trans-card reveal">🏧<b>Pencatatan</b><span>Pemasukan & pengeluaran</span></div>
-          <div class="trans-card reveal">📸<b>Dokumentasi</b><span>Dokumentasi kegiatan</span></div>
-          <div class="trans-card reveal">📑<b>Laporan</b><span>Penyaluran bantuan</span></div>
-          <div class="trans-card reveal">✓<b>LPJ</b><span>Setelah kegiatan selesai</span></div>
-        </div>
-      </div>
-    </section>
-
+    <!-- CONTACT -->
     <section class="contact-section" id="contact">
       <div class="container contact-box reveal">
         <div>
           <p class="eyebrow">CONTACT</p>
           <h2>Mari Berkontribusi Bersama Servantlux</h2>
-          <p>Social Live-In Servantlux 2026</p>
+          <p>Company Profile · Grand Plan 2026–2030</p>
         </div>
         <button class="btn btn-gold" data-modal="contactModal">Hubungi Kami →</button>
       </div>
@@ -220,18 +316,35 @@
         </div>
         <p>Bringing Light.<br>Empowering Lives.<br>Shaping a Better Tomorrow.</p>
       </div>
-      <div><h4>MENU</h4><a href="#about">Introduction</a><a href="#mission">Vision & Mission</a><a href="#structure">Structural</a><a href="#activities">Activity</a></div>
-      <div><h4>SUPPORT</h4><button data-modal="donateModal">Donate Now</button><button data-modal="volunteerModal">Become Volunteer</button><button data-modal="donateModal">Sponsorship</button></div>
-      <div><h4>CONTACT</h4><p>Sukabumi, Jawa Barat<br>Indonesia</p><p>☎ 081399017165 (Nakeya)</p></div>
+      <div>
+        <h4>COMPANY</h4>
+        <a href="#about">About Us</a>
+        <a href="#vision-mission">Vision & Mission</a>
+        <a href="#grandplan">Grand Plan</a>
+        <a href="#activities">Programs</a>
+      </div>
+      <div>
+        <h4>GRAND PLAN</h4>
+        <a href="#grandplan-2026">2026 · Foundation</a>
+        <a href="#grandplan-2027">2027 · Strengthen</a>
+        <a href="#grandplan-2028">2028 · Expansion</a>
+        <a href="#grandplan-2029">2029 · Collaboration</a>
+        <a href="#grandplan-2030">2030 · Excellence</a>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <p>Indonesia</p>
+        <button data-modal="contactModal">Contact Servantlux →</button>
+      </div>
     </div>
-    <div class="copyright">© 2026 Servantlux Philanthropy Center. All Rights Reserved.</div>
+    <div class="copyright">© 2026–2030 Servantlux Philanthropy Center. All Rights Reserved.</div>
   </footer>
 
   <!-- MODALS -->
   <div class="modal" id="programModal">
     <div class="modal-content">
-      <button class="modal-close">×</button>
-      <p class="eyebrow dark">SERVANTLUX ACTIVITY</p>
+      <button class="modal-close" aria-label="Tutup">×</button>
+      <p class="eyebrow dark">SERVANTLUX PROGRAM</p>
       <h2 id="programTitle"></h2>
       <div class="gold-line"></div>
       <p id="programDescription"></p>
@@ -241,49 +354,47 @@
 
   <div class="modal" id="aboutModal">
     <div class="modal-content">
-      <button class="modal-close">×</button>
+      <button class="modal-close" aria-label="Tutup">×</button>
       <p class="eyebrow dark">ABOUT SERVANTLUX</p>
       <h2>Hadir, Berbagi, dan Memberikan Dampak Nyata.</h2>
-      <p>Servantlux mengangkat nilai kasih, kepedulian, gotong royong, dan kemanusiaan. Social Live-In Servantlux 2026 dirancang agar peserta dapat berinteraksi langsung dengan masyarakat, mengikuti aktivitas warga, serta memberikan manfaat melalui kegiatan sosial.</p>
-      <p><b>Tema:</b> “Belajar, Berbaur, dan Berkontribusi Bersama Masyarakat.”</p>
+      <p>Servantlux mengembangkan pelayanan melalui penguatan organisasi, program sosial, kolaborasi, transparansi, dan pengembangan kualitas secara berkelanjutan.</p>
+      <p><b>Grand Plan:</b> 2026–2030 menuju organisasi yang kuat, berkualitas, berintegritas, transparan, dan berdampak.</p>
     </div>
   </div>
 
   <div class="modal" id="donateModal">
     <div class="modal-content center">
-      <button class="modal-close">×</button>
+      <button class="modal-close" aria-label="Tutup">×</button>
       <div class="modal-heart">♡</div>
-      <p class="eyebrow dark">SUPPORT SERVANTLUX 2026</p>
+      <p class="eyebrow dark">SUPPORT SERVANTLUX</p>
       <h2>Jadilah Bagian dari Kebaikan</h2>
-      <p>Dukungan dapat diberikan dalam bentuk <b>donasi dana, donasi barang, maupun sponsorship</b>.</p>
+      <p>Dukungan dapat diberikan melalui donasi, sponsorship, kolaborasi program, maupun dukungan fasilitas.</p>
       <div class="donation-list">
-        <div>💰 <b>Donasi Dana</b><small>Mendukung kebutuhan utama kegiatan</small></div>
-        <div>🎁 <b>Donasi Barang</b><small>Sembako, perlengkapan anak, snack, dan kebutuhan kegiatan</small></div>
-        <div>🤝 <b>Sponsorship</b><small>Dukungan dana, fasilitas, maupun kebutuhan program</small></div>
+        <div>◈ <b>Donasi Dana</b><small>Mendukung kebutuhan program dan pelayanan.</small></div>
+        <div>◈ <b>Donasi Barang</b><small>Mendukung kebutuhan masyarakat dan kegiatan.</small></div>
+        <div>◈ <b>Sponsorship</b><small>Dukungan dana, fasilitas, maupun program.</small></div>
       </div>
-      <p class="target">Target Dana: <b>Rp 3.000.000</b></p>
-      <a class="btn btn-maroon" href="tel:081399017165">Hubungi Nakeya · 081399017165</a>
+      <button class="btn btn-maroon" data-modal="contactModal">Hubungi Servantlux →</button>
     </div>
   </div>
 
   <div class="modal" id="volunteerModal">
     <div class="modal-content center">
-      <button class="modal-close">×</button>
-      <div class="modal-heart">🫂</div>
+      <button class="modal-close" aria-label="Tutup">×</button>
+      <div class="modal-heart">✦</div>
       <p class="eyebrow dark">JOIN US</p>
       <h2>Become a Volunteer</h2>
-      <p>Ingin ikut berkontribusi dalam Social Live-In Servantlux 2026? Hubungi tim Servantlux untuk informasi lebih lanjut.</p>
-      <a class="btn btn-maroon" href="tel:081399017165">Hubungi Nakeya →</a>
+      <p>Berpartisipasi dalam kegiatan pelayanan dan menjadi bagian dari perjalanan Servantlux.</p>
+      <button class="btn btn-maroon" data-modal="contactModal">Hubungi Servantlux →</button>
     </div>
   </div>
 
   <div class="modal" id="contactModal">
     <div class="modal-content center">
-      <button class="modal-close">×</button>
+      <button class="modal-close" aria-label="Tutup">×</button>
       <p class="eyebrow dark">CONTACT US</p>
       <h2>Servantlux Philanthropy Center</h2>
-      <p>DI Yogyakarta, Indonesia</p>
-      <a class="phone-link" href="tel:081399017165">☎ 081399017165 (Nakeya)</a>
+      <p>Indonesia</p>
       <div class="gold-line"></div>
       <p>“Bersama, kita hadirkan kebaikan yang nyata.”</p>
     </div>
