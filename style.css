@@ -647,3 +647,52 @@ a{
     transition-duration:.01ms!important;
   }
 }
+/* ================================
+   HERO LOGO - MOBILE RESPONSIVE
+   ================================ */
+
+@media (max-width:767px){
+
+  .hero-logo{
+    position:absolute;
+    width:clamp(220px, 65vw, 330px);
+    max-width:65vw;
+    right:clamp(-100px, -12vw, -45px);
+    bottom:clamp(-35px, -3vw, -10px);
+    opacity:.18;
+    z-index:1;
+    pointer-events:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .hero-logo img{
+    width:100%;
+    max-width:100%;
+    height:auto;
+    object-fit:contain;
+  }
+
+  .glow{
+    width:clamp(180px, 55vw, 260px);
+    height:clamp(180px, 55vw, 260px);
+  }
+}
+
+
+/* HP kecil */
+@media (max-width:420px){
+
+  .hero-logo{
+    width:clamp(190px, 58vw, 260px);
+    max-width:58vw;
+    right:-75px;
+    bottom:-25px;
+    opacity:.15;
+  }
+
+  .hero-logo img{
+    width:100%;
+  }
+}
