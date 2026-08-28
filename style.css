@@ -1085,24 +1085,18 @@ footer{background:#100d0c;color:#bfae98;padding:55px 0 0}
 #grand-plan {
   background:
     radial-gradient(
-      circle at 0% 50%,
-      rgba(255, 244, 223, 0.92),
-      transparent 42%
-    ),
-    radial-gradient(
-      circle at 100% 50%,
-      rgba(255, 244, 223, 0.92),
-      transparent 42%
+      circle at 50% 0%,
+      rgba(150, 35, 55, 0.35),
+      transparent 45%
     ),
     linear-gradient(
-      90deg,
+      135deg,
       #fff4df 0%,
-      #650b1b 14%,
-      #650b1b 36%,
-      #3f0610 50%,
-      #650b1b 64%,
-      #650b1b 86%,
-      #fff4df 100%
+      #4b0713 25%,
+      #650b1b 50%,
+      #fff4df 95%,
+      #4b0713 85%,
+      #3f0610 100%
     );
 
   color: #fff4df;
