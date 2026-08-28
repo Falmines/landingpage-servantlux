@@ -174,6 +174,23 @@ img{max-width:100%;display:block}
   text-transform:uppercase;
 }
 .eyebrow.dark{color:#9a6934}
+.eyebrow-aboutup {
+  color: #720b20;
+  font-size:30px;
+  letter-spacing:2px;
+  font-weight:800;
+  margin-bottom:13px;
+  font-style:italic;
+}
+.eyebrow-aboutdown {
+  color: #720b20;
+  font-size:30px;
+  letter-spacing:2px;
+  font-weight:800;
+  margin-bottom:13px;
+  font-style:italic;
+}
+
 h1,h2,h3,h4{font-weight:800;line-height:1.12}
 h1{
   font-size:clamp(48px,5.4vw,78px);
@@ -701,7 +718,7 @@ footer{background:#100d0c;color:#bfae98;padding:55px 0 0}
   .hero-copy{width:100%;padding-top:15px}
   .eyebrow{font-size:8px;letter-spacing:1.3px}
   h1{font-size:clamp(36px,10.8vw,50px);letter-spacing:-1px}
-  .hero-text{font-size:12px;line-height:1.7;margin:18px 0 23px}
+  .hero-text{font-size:32px;line-height:1.7;margin:18px 0 23px}
   .hero-actions{display:grid;grid-template-columns:1fr;gap:9px}
   .hero-actions .btn{width:100%;min-height:48px}
   .hero-meta{gap:8px;font-size:7px;max-width:100%}
@@ -780,4 +797,678 @@ footer{background:#100d0c;color:#bfae98;padding:55px 0 0}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
+.hero-text.vision-text {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  line-height: 1.7;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: .2px;
+  max-width: 900px;
+  margin: 25px 0 32px;
+}
+
+@media (max-width: 767px) {
+  .hero-text.vision-text {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin: 20px 0 26px;
+  }
+}
+
+/* ================================
+   HERO META HIGHLIGHT
+   ================================ */
+
+.highlight-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-top: 28px;
+  padding: 12px 22px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 130, 0.16),
+    rgba(94, 8, 18, 0.85)
+  );
+
+  border: 1px solid rgba(218, 165, 75, 0.8);
+  border-radius: 50px;
+
+  box-shadow:
+    0 0 0 1px rgba(218, 165, 75, 0.08),
+    0 8px 30px rgba(0, 0, 0, 0.25),
+    inset 0 0 20px rgba(218, 165, 75, 0.08);
+
+  color: #f5d58a;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+
+  backdrop-filter: blur(8px);
+}
+
+/* Tahun dibuat paling menonjol */
+
+.highlight-meta .meta-year {
+  color: #fff4cf;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 0 10px rgba(255, 210, 100, 0.35);
+}
+
+/* Garis pemisah */
+
+.highlight-meta .meta-divider {
+  width: 1px;
+  height: 45px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #dca94f,
+    transparent
+  );
+}
+
+/* =================================
+   COMPANY PROFILE HIGHLIGHT
+   ================================= */
+
+.company-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 760px;
+
+  margin: 28px 0 0;
+  padding: 13px 30px;
+
+  border-top: 1px solid rgba(220, 169, 79, .75);
+  border-bottom: 1px solid rgba(220, 169, 79, .75);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(110, 12, 25, .55),
+    rgba(110, 12, 25, .75),
+    rgba(110, 12, 25, .55),
+    transparent
+  );
+
+  color: #f3d28a;
+
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, .15),
+    inset 0 0 20px rgba(218, 165, 75, .06);
+}
+
+.company-highlight span {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.company-highlight strong {
+  color: #f3d28a;
+  font-weight: 800;
+}
+
+.company-highlight i {
+  display: block;
+
+  width: 5px;
+  height: 5px;
+
+  margin: 0 18px;
+
+  border-radius: 50%;
+  background: #dca94f;
+
+  box-shadow: 0 0 8px rgba(220, 169, 79, .7);
+}
+
+@media (max-width: 767px) {
+
+  .company-highlight {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 11px 14px;
+
+    font-size: .62rem;
+    letter-spacing: 1.3px;
+
+    white-space: nowrap;
+  }
+
+  .company-highlight i {
+    width: 4px;
+    height: 4px;
+    margin: 0 10px;
+  }
+}
+
+/* =========================================
+   VISION & MISSION TITLE HIGHLIGHT
+   ========================================= */
+
+.vm-title-highlight {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  padding: 18px 38px 20px;
+
+  border-top: 1px solid rgba(215,174,98,.8);
+  border-bottom: 1px solid rgba(215,174,98,.8);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(215,174,98,.08),
+      rgba(100,8,20,.45),
+      rgba(215,174,98,.08),
+      transparent
+    );
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,.15),
+    inset 0 0 30px rgba(215,174,98,.04);
+}
+
+.vm-title-label {
+  font-family: "Open Sauce One", sans-serif;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: #d7ae62;
+  text-transform: uppercase;
+}
+
+.vm-title-highlight h2 {
+  margin: 0;
+  color: #fff4d5;
+  font-family: "Open Sauce One", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  text-shadow:
+    0 3px 15px rgba(0,0,0,.3);
+}
+
+.vm-heading-description {
+  margin-top: 22px;
+  color: #ead8bd;
+  font-size: 45px;
+}
+
+.vm-label {
+  font-family: "Open Sauce One", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 3px;
+  color: #d7ae62;
+  text-transform: uppercase;
+}
+
+.vm-label strong,
+.vm-label em {
+  font-weight: 800;
+  font-style: italic;
+}
+
+.vision-statement {
+  font-family: "Open Sauce One", sans-serif;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.7;
+  font-weight: 800;
+  font-style: italic;
+  color: #fff8e8;
+}
+
+@media (max-width: 767px) {
+
+  .vm-title-highlight {
+    width: 100%;
+    padding: 15px 18px 17px;
+  }
+
+  .vm-title-label {
+    font-size: .58rem;
+    letter-spacing: 2.5px;
+  }
+
+  .vm-title-highlight h2 {
+    font-size: clamp(1.55rem, 8vw, 2.2rem);
+    text-align: center;
+  }
+
+  .vm-heading-description {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .vm-label {
+    font-size: .85rem;
+    letter-spacing: 2px;
+  }
+
+  .vision-statement {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+}
+
+/* =================================
+   GRAND PLAN - BURGUNDY SECTION
+   ================================= */
+
+#grand-plan {
+  background:
+    radial-gradient(
+      circle at 0% 50%,
+      rgba(255, 244, 223, 0.92),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      rgba(255, 244, 223, 0.92),
+      transparent 42%
+    ),
+    linear-gradient(
+      90deg,
+      #fff4df 0%,
+      #650b1b 14%,
+      #650b1b 36%,
+      #3f0610 50%,
+      #650b1b 64%,
+      #650b1b 86%,
+      #fff4df 100%
+    );
+
+  color: #fff4df;
+}
+
+#grand-plan .section-heading {
+  color: #650b1b;
+}
+
+#grand-plan .vm-heading-description {
+  color: #ead8bd;
+}
+
+#grand-plan .vm-title-highlight {
+  border-top: 1px solid rgba(215, 174, 98, .9);
+  border-bottom: 1px solid rgba(215, 174, 98, .9);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(215, 174, 98, .08),
+      rgba(45, 3, 10, .45),
+      rgba(215, 174, 98, .08),
+      transparent
+    );
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, .25),
+    inset 0 0 30px rgba(215, 174, 98, .05);
+}
+
+#grand-plan .vm-title-label {
+  color: #d7ae62;
+}
+
+#grand-plan .vm-title-highlight h2 {
+  color: #fff4d5;
+}
+
+.vm-title-highlight {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  padding: 18px 38px 20px;
+
+  /* BACKGROUND BURGUNDY */
+  background: linear-gradient(
+    135deg,
+    #4b0713 0%,
+    #650b1b 50%,
+    #4b0713 100%
+  );
+
+  border-top: 1px solid #d7ae62;
+  border-bottom: 1px solid #d7ae62;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, .25),
+    inset 0 0 25px rgba(255, 215, 140, .05);
+}
+
+/* LABEL TETAP GOLD */
+.vm-title-label {
+  color: #d7ae62;
+}
+
+/* JUDUL TETAP PUTIH/CREAM */
+.vm-title-highlight h2 {
+  color: #fff4d5;
+}
+
+.vm-title-highlight {
+  background: #650b1b;
+  border-top: 1px solid #d7ae62;
+  border-bottom: 1px solid #d7ae62;
+}
+
+/* =========================================
+   SECTION TITLE HIGHLIGHT
+   ========================================= */
+
+.vm-title-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+  padding: 12px 25px 14px;
+
+  background: #720b20;
+
+  /* HANYA GARIS EMAS */
+  border-top: 1px solid #d7ae62;
+  border-bottom: 1px solid #d7ae62;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .15);
+}
+
+/* COMPANY PROFILE / GRAND PLAN */
+
+.vm-title-label {
+  margin-bottom: 5px;
+
+  font-family: "Open Sauce One", sans-serif;
+  font-size: .55rem;
+  font-weight: 800;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: #d7ae62;
+}
+
+/* JUDUL */
+
+.vm-title-highlight h2 {
+  margin: 0;
+
+  font-family: "Open Sauce One", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  font-weight: 800;
+  line-height: 1.05;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  /* TETAP PUTIH */
+  color: #ffffff;
+
+  text-shadow: 0 3px 8px rgba(0,0,0,.25);
+}
+
+/* =========================================
+   HIGHLIGHT TITLE - DEFAULT / VISI MISI
+   ========================================= */
+
+.vm-title-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  padding: 12px 25px 14px;
+
+  background: #720b20;
+
+  border-top: 1px solid #d7ae62;
+  border-bottom: 1px solid #d7ae62;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .15);
+}
+
+.vm-title-label {
+  margin-bottom: 5px;
+
+  font-family: "Open Sauce One", sans-serif;
+  font-size: .55rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+
+  color: #d7ae62;
+  text-transform: uppercase;
+}
+
+.vm-title-highlight h2 {
+  margin: 0;
+
+  font-family: "Open Sauce One", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  text-shadow: 0 3px 8px rgba(0,0,0,.25);
+}
+
+
+/* =========================================
+   GRAND PLAN - KEMBALI GRADIENT
+   ========================================= */
+
+.grand-plan .vm-title-highlight {
+  background:
+    linear-gradient(
+      135deg,
+      #f8f2e5 0%,
+      #fffaf0 45%,
+      #ead7c5 70%,
+      #f7eee1 100%
+    );
+
+  border-top: 1px solid #d7ae62;
+  border-bottom: 1px solid #d7ae62;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.12),
+    inset 0 0 30px rgba(150,100,60,.08);
+}
+
+/* Label Grand Plan tetap gold */
+
+.grand-plan .vm-title-label {
+  color: #b88a32;
+}
+
+/* Judul Grand Plan tetap burgundy */
+
+.grand-plan .vm-title-highlight h2 {
+  color: #720b20;
+
+  text-shadow:
+    0 2px 5px rgba(0,0,0,.12);
+}
+
+.vm-heading-description {
+  margin-top: 14px;
+  margin-bottom: 0;
+
+  font-family: "Open Sauce One", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+
+  color: #4b2528;
+  text-align: center;
+}
+
+.vm-heading-description {
+  margin-top: 12px;
+
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.6;
+
+  color: #4b2528;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .vm-heading-description {
+    margin-top: 10px;
+    font-size: .9rem;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+}
+
+.values-strip {
+  width: 100%;
+  max-width: 1100px;
+  margin: 25px auto 0;
+  padding: 16px 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+
+  background: #720b20;
+
+  border: 1px solid rgba(215, 174, 98, .65);
+  border-radius: 7px;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, .15);
+}
+
+.values-strip span {
+  font-family: "Open Sauce One", sans-serif;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.values-strip i {
+  font-style: normal;
+  font-size: .7rem;
+  font-weight: 800;
+
+  color: #d7ae62;
+}
+
+.vm-title-label {
+  font-family: "Open Sauce One", sans-serif;
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: #f6d77a;
+
+  text-shadow:
+    0 0 4px rgba(255, 220, 120, .8),
+    0 0 10px rgba(255, 190, 60, .55),
+    0 0 18px rgba(255, 170, 40, .3);
+}
+
+.vm-title-label {
+  position: relative;
+
+  font-family: "Open Sauce One", sans-serif;
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: #ffe39a;
+
+  text-shadow:
+    0 0 5px rgba(255, 225, 145, .9),
+    0 0 12px rgba(255, 195, 70, .7),
+    0 0 22px rgba(255, 170, 40, .45);
+}
+
+.vm-title-label::after {
+  content: "";
+  display: block;
+
+  width: 55px;
+  height: 1px;
+
+  margin: 7px auto 0;
+
+  background: #e5b957;
+
+  box-shadow:
+    0 0 5px #f6d77a,
+    0 0 12px rgba(255, 190, 60, .8),
+    0 0 20px rgba(255, 170, 40, .45);
+}
+
+.about-label {
+  font-family: "Open Sauce One", sans-serif;
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: #720b20 ;
+
+  text-shadow:
+    0 0 5px rgba(255, 225, 145, .9),
+    0 0 12px rgba(255, 195, 70, .7),
+    0 0 22px rgba(255, 170, 40, .45);
+}
+
+.eyebrow-aboutup {
+  
 }
